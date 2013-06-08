@@ -79,6 +79,10 @@ echo "-----> Running: go get -tags heroku ./..."
 cd $p
 go get -tags heroku ./...
 
+echo "Install Rich MongoDB driver for Go"
+echo "-----> Running: go get labix.org/v2/mgo"
+go get labix.org/v2/mgo
+
 mkdir -p $build/bin
 mv $GOPATH/bin/* $build/bin
 rm -rf $build/.heroku
